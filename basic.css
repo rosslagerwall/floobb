@@ -1,0 +1,513 @@
+#login {
+	font-size: 10px;
+	color: #FFFFFF;
+	text-align: right;
+	position: absolute;
+	top: 85px;
+	right: 6%;
+	/*border: solid 1px;*/
+}
+
+#login a {
+	color: #FFFFFF;
+}
+
+#login a:hover {
+	color: red;
+}
+
+#header {
+	width: 500px;
+	margin-left: 5%;
+	vertical-align: top;
+	height: 40px;
+}
+
+#container {
+	padding:10px;
+	background: url(images/grad.png) repeat-x;
+	position: relative;
+}
+
+.bl {
+	background: url(images/bl.gif)  0 100% no-repeat;
+	background-color: #799add;
+	padding: 0px 0px 0px 0px;
+	width: 96%;
+	border-width: 2px 2px 2px 2px;
+	border-color: silver;
+	border-style: solid;
+	background-color: #799add;
+	margin-left: auto;
+	margin-right: auto;
+}
+.br {
+	background: url(images/br.gif) 100% 100% no-repeat;
+}
+
+body {
+	background-color: grey;
+	color: #000000;
+	font-weight: 700;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+table {
+	color: #000000;
+	font-weight: 700;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: red;
+}
+
+#copyright {
+	margin: auto;
+	margin-top: 10px;
+	width: 200px;
+	text-align: center;
+	font-size: 12px;
+	color: #BBBBBB;
+}
+
+#headingImage {
+	width: 300px;
+	text-align: center;
+	margin: 0px auto 15px auto;
+}
+
+.list {
+	table-layout: fixed;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 90%;
+	border: solid 1px;
+	margin: auto;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.list a:link {
+	color: black;
+}
+
+.list a:visited {
+	color: black;
+}
+
+.list a:hover {
+	color: red;
+}
+
+.list tr {
+	border: solid 1px;
+}
+
+.listtopicname {
+	background-color: #e9f3ff;
+	border-right: 1px solid black;
+	width: 50%;
+	padding: 10px 0px 10px 10px;
+}
+
+.listtopiccreator {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	width: 20%;
+	padding: 10px 0px 10px 5px;
+}
+
+.listtopicposts {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	text-align: center;
+	width: 10%;
+	padding: 10px 0px 10px 0px;
+}
+
+.listtopicdate {
+	background-color: #bfbfbf;
+	width: 150px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	font-size: 10px;
+}
+
+.listcell {
+	background-color: #e9f3ff;
+	border-right: 1px solid black;
+	padding: 10px 0px 10px 10px;
+}
+
+.listuser {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	width: 100px;
+	padding: 10px 0px 10px 5px;
+	vertical-align: top;
+}
+
+.listdate {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	text-align: center;
+	font-size: 10px;
+	width: 140px;
+	padding: 12px 0px 10px 0px;
+	vertical-align: top;
+}
+
+.listmessage {
+	background-color: #e9f3ff;
+	padding: 10px 5px 10px 5px;
+	vertical-align: top;
+}
+
+.sig {
+	margin-top: 10px;
+	border-top: dashed #AAAAAA 1px;
+	color: #888888; 
+}
+
+.listsubject {
+	background-color: #e9f3ff;
+	border-right: 1px solid black;
+	padding: 10px 0px 10px 10px;
+}
+
+.listsender {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	width: 195px;
+	padding: 10px 0px 10px 5px;
+}
+
+.listname {
+	background-color: #e9f3ff;
+	border-right: 1px solid black;
+	width: 70%;
+	padding: 10px 0px 10px 10px;
+}
+
+.listlevel {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	width: 15%;
+	padding: 10px 0px 10px 5px;
+}
+
+.listbanned {
+	background-color: #bfbfbf;
+	border-right: 1px solid black;
+	width: 15%;
+	padding: 10px 0px 10px 5px;
+}
+
+.listlevel input{
+	width: 20px;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.listleft {
+	background-color: #e9f3ff;
+	border-right: 1px solid black;
+	width: 80%;
+	padding: 10px 0px 10px 10px;
+}
+
+.listright {
+	background-color: #bfbfbf;
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+}
+
+.listlefta {
+	background-color: #bfbfbf;
+	border-right: 1px solid;
+	width: 35%;
+	padding: 10px 0px 10px 10px;
+	font-family: "Trebuchet MS";
+}
+
+.listrighta {
+	background-color: #e9f3ff;
+	width: 65%;
+	padding: 10px 0px 10px 2%;
+}
+
+.listrighta input {
+	width: 96%;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.listleftb {
+	background-color: #bfbfbf;
+	border-right: 1px solid;
+	width: 20%;
+	padding: 10px 0px 10px 10px;
+	font-family: "Trebuchet MS";
+}
+
+.listrightb {
+	background-color: #e9f3ff;
+	width: 80%;
+	padding: 10px 0px 10px 2%;
+}
+
+.listrightb textarea {
+	width: 96%;
+	height: 150px;
+}
+
+.inputBox {
+	font-size: 12px;
+	font-family: Verdana;
+	width: 96%;
+}
+
+#statistics {
+	background-color: #bfbfbf;
+	border: 1px solid black;
+	font-size: 12px;
+	color: #FFFFFF;
+	margin: auto;
+	margin-top: 40px;
+	padding: 5px 0px 5px 0px;
+	text-align: center;
+	width: 90%;
+}
+
+#regUsers {
+	color: white;
+}
+
+#regUsers:hover {
+	color: red;
+}
+
+.controls {
+	margin-left: 10px;
+	font-size: 10px;
+}
+
+.controls a {
+	text-decoration: none;
+}
+
+.tbl {
+	width: 90%;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+	margin:auto;
+	margin-top: 10px;
+	font-weight: normal;
+}
+
+.tbl tr {
+	border: 1px solid;
+}
+
+.tblleft {
+	border: solid 1px;
+	text-decoration: underline;
+	padding: 10px;
+	background-color: #bfbfbf;
+	width: 200px;
+	font-family: "Trebuchet MS";
+}
+
+.tblright {
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+	background-color: #e9f3ff;
+}
+
+.tblright input {
+	width: 98%;
+}
+
+.tblright textarea {
+	width: 99%;
+	height: 150px;
+}
+
+#submitDiv {
+	margin: auto;
+	margin-top: 15px;
+	text-align: center;
+}
+
+#message_tbl {
+	margin: 10px auto auto auto;
+}
+
+.error {
+	width: 400px;
+	text-align: center;
+	margin: 10px auto auto auto;
+}
+
+.buttons {
+	width: 400px;
+	margin: 10px auto auto auto;
+	text-align: center;
+}
+
+#imageInfo {
+	font-size: 10px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+#messageDiv {
+	width: 90%;
+	margin: 20px auto auto auto;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid;
+	background-color: #e9f3ff;
+}
+
+#messageDiv textarea {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90%;
+	height: 350px;
+}
+
+#topicDiv {
+	width: 90%;
+	margin: 20px auto auto auto;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid;
+	background-color: #e9f3ff;
+}
+
+#name {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90%;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+#forumDiv {
+	width: 90%;
+	margin: 20px auto auto auto;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid;
+	background-color: #e9f3ff;
+}
+
+.textboxes {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90%;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+#controlDiv {
+	text-align: center;
+	width: 400px;
+	margin: 5px auto auto auto;
+}
+
+#controlDiv a {
+	margin-right: 10px;
+}
+
+#replyId {
+	margin: 20px auto auto auto;
+	width: 80%;
+	text-align: center;
+}
+
+#submitId {
+	margin-top: 10px;
+}
+
+.delete {
+	font-size: 10px;
+	text-decoration: none;
+}
+
+#pollDiv {
+	width: 800px;
+	margin: auto auto 20px auto;
+	text-align: center;
+}
+
+#options {
+	width: 400px;
+	margin: auto auto auto 350px;
+	text-align: left;
+}
+
+#adminControls {
+	margin: 10px 0px 10px 5%;
+}
+
+.quote {
+	border: 1px solid silver;
+	background-color: #DDDDDD;
+}
+
+.stickylistname {
+	background-color: #e9f3b7;
+	border-right: 1px solid black;
+	width: 50%;
+	padding: 10px 0px 10px 10px;
+}
+
+.stickylistcreator {
+	background-color: #bfbf8e;
+	border-right: 1px solid black;
+	width: 20%;
+	padding: 10px 0px 10px 5px;
+}
+
+.stickylistposts {
+	background-color: #bfbf8e;
+	border-right: 1px solid black;
+	text-align: center;
+	width: 10%;
+	padding: 10px 0px 10px 0px;
+}
+
+.stickylistdate {
+	background-color: #bfbf8e;
+	width: 150px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	font-size: 10px;
+}
+
+#addTopic {
+	margin-top: 10px;
+	margin-left: 5%;
+	height: 30px;
+	width: 90%;
+}
+
+.deleteTopic {
+	margin-left: 10px;
+	font-size: 10px;
+	text-decoration: none;
+}

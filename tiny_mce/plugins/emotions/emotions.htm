@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#emotions_dlg.title}</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/emotions.js"></script>
+	<script type="text/javascript">
+		function load(path,num)
+		{
+			var str = [];
+str[0] = "smiley-cool.gif,smiley-cry.gif,smiley-embarassed.gif,smiley-foot-in-mouth.gif,smiley-frown.gif,smiley-innocent.gif,smiley-kiss.gif,smiley-laughing.gif,smiley-money-mouth.gif,smiley-sealed.gif,smiley-smile.gif,smiley-surprised.gif,smiley-tongue-out.gif,smiley-undecided.gif,smiley-wink.gif,smiley-yell.gif";
+			var strArr = str[num].split(",");
+			var column = Math.ceil(Math.sqrt(strArr.length));
+			var tbl = document.createElement("table");
+			for (var i = 0; i < strArr.length; i++)
+			{
+				if (i % column == 0)
+				{
+					lastRow = tbl.insertRow(-1);
+				}
+				
+				var cell = lastRow.insertCell(-1);
+				var a = document.createElement("a");
+				a.setAttribute("href","javascript:EmotionsDialog.insert('"+path+strArr[i]+"','" + strArr[i] + "');");
+				var img = document.createElement("img");
+				img.setAttribute("src","img/"+path+strArr[i]);
+				img.setAttribute("title",strArr[i].substring(0,strArr[i].lastIndexOf(".")));
+				img.setAttribute("alt",strArr[i].substring(0,strArr[i].lastIndexOf(".")));
+				img.setAttribute("border","0");
+				a.appendChild(img);
+				cell.appendChild(a);
+				
+			}
+			
+			var max = str.length-1;
+			
+			for (i = 1; i <= max; i++)
+			{
+				document.getElementById("but" + i).parentNode.removeChild(document.getElementById("but" + i));
+			}
+			document.getElementById("but0").parentNode.insertBefore(tbl,document.getElementById("but0").nextSibling);
+			document.getElementById("but0").parentNode.removeChild(document.getElementById("but0"));
+			
+			//tinyMCEPopup.resizeToInnerSize();
+		}
+	</script>
+	<base target="_self" />
+</head>
+<body style="display: none">
+	<div align="center">
+		<div class="title">{#emotions_dlg.title}:<br /><br /></div>
+<input type="button" onClick='load("smiley/",0);' id="but0" value="smiley" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+	color: #000000;
+	font-family: Verdana;
+	font-size: 12;
+}
+
+blockquote {
+	border: 1px solid silver;
+}
