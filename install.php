@@ -119,7 +119,9 @@
 <body>
 	<div class="bl"><div class="br"><div id="container">
 		<div id="headingImage"><img src="images/heading.png" /></div></div>
-		<div id="header">Install:<br />
+		<div id="header" style="width: 90%">Install:<br />
+		<p>Please ensure that the <i>db</i> directory has suitable write permissions
+		otherwise the install will not succeed.</p>
 		</div>
 		<?php
 			if (trim(file_get_contents("db/boardname.dat")) != "")
