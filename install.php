@@ -233,6 +233,6 @@
 		?>
 		
 	</div></div></div>
-	<div id="copyright">&copy; 2008 - flooBB</div>
+	<div id="copyright">&copy; 2011 - flooBB</div>
 </body>
 </html>

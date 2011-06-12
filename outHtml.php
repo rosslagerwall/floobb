@@ -30,7 +30,7 @@
 	function outHtml3()
 	{
 		echo '	</div></div></div>
-			<div id="copyright">&copy; 2009 - flooBB</div>
+			<div id="copyright">&copy; 2011 - flooBB</div>
 		</body>
 		</html>';
 	}

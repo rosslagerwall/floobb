@@ -1,5 +1,5 @@
 ﻿FlooBB 0.9
-Copyright 2009. shiz
+Copyright 2011. Ross Lagerwall
 
 This software is released under the terms of the GPL.
 
