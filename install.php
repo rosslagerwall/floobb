@@ -189,6 +189,7 @@
 			}
 			else
 			{
+				mkdir("db/PMs");
 				file_put_contents("db/boardname.dat",stripslashes($_POST['boardname']));
 				file_put_contents("db/boarddescription.dat",stripslashes($_POST['boarddescription']));
 				
