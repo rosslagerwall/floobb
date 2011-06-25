@@ -1,0 +1,64 @@
+changeset:   11:b46d5704abb0
+tag:         tip
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 07:46:36 2011 +0200
+summary:     Added tag 1.1 for changeset e45f9632fce1
+
+changeset:   10:e45f9632fce1
+tag:         1.1
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 07:46:31 2011 +0200
+summary:     Bump to version 1.1.
+
+changeset:   9:e6542ec8bce8
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 07:40:59 2011 +0200
+summary:     Remove extra blank line in forumOnlineUsers.dat causing invalid forum statistics.
+
+changeset:   8:5c1503ccbdf3
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 07:30:09 2011 +0200
+summary:     Mkdir db/PMs during install.
+
+changeset:   7:f559ec011112
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 07:10:17 2011 +0200
+summary:     Bump to version 1.0.
+
+changeset:   6:c79eb010dba5
+tag:         1.0
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 07:07:56 2011 +0200
+summary:     Fix permissions to not be executable.
+
+changeset:   5:2c5e1e9d2d0d
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 06:57:46 2011 +0200
+summary:     Rename Readme.txt to standardized README.
+
+changeset:   4:c969f958b4c8
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 06:56:35 2011 +0200
+summary:     Remind users to ensure suitable file permissions during install.
+
+changeset:   3:426bed17aee5
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 06:50:55 2011 +0200
+summary:     Bump up copyright year to 2011.
+
+changeset:   2:0c3416c5b16b
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Sun Jun 12 06:26:57 2011 +0200
+summary:     Migrate license to the GNU GPLv3.
+
+changeset:   1:b12e184029e6
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Wed Apr 13 07:00:53 2011 +0200
+summary:     Added tag v0.9 for changeset c516a2e315cd
+
+changeset:   0:c516a2e315cd
+tag:         v0.9
+user:        Ross Lagerwall <rosslagerwall@gmail.com>
+date:        Wed Apr 13 07:00:16 2011 +0200
+summary:     Initial commit
+
