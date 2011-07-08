@@ -236,6 +236,6 @@
 		?>
 		
 	</div></div></div>
-	<div id="copyright">&copy; 2011 - flooBB 1.2</div>
+	<div id="copyright">&copy; 2011 - flooBB 1.2.0</div>
 </body>
 </html>

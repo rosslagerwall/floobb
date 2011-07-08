@@ -1,0 +1,36 @@
+Version 1.2.0
+8 July 2011
+
+ Bugfixes:
+    * improve documentation
+    * change to major, minor, micro version system
+
+Version 1.2
+30 June 2011
+
+ Bugfixes:
+    * add standard Free Software files
+    * add TinyMCE license
+
+Version 1.1
+12 June 2011
+
+ Bugfixes:
+    * remove extra blank line in "forumOnlineUsers.dat" causing invalid forum
+      statistics
+    * create missing "db/PMs" directory during install
+
+Version 1.0
+12 June 2011
+
+ New features, enhancements:
+    * use the GNU GPLv3
+
+ Bugfixes:
+    * fix permissions (and include reminder during install)
+    * use standardized file names
+
+Version 0.9
+13 April 2011
+
+ Initial release
