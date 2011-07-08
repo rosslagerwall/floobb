@@ -1,7 +1,7 @@
-﻿FlooBB
+﻿flooBB
 Copyright 2011. Ross Lagerwall
 
-FlooBB is an easy to use bulletin board system which does not rely on an
+flooBB is an easy to use bulletin board system which does not rely on an
 external database. It simply uses text files to store the data and is optimized
 for speed. It incorporates TinyMCE to provide a WYSIWYG method of entering
 posts into the system.
@@ -10,6 +10,9 @@ Requirements/Prerequisites:
 * A webserver (Apache, Lighttpd, etc.).
 * PHP 5.2+
 * The PHP GD extension.
+
+Thanks:
+tinymce - http://tinymce.moxiecode.com/
 
 License:
 
