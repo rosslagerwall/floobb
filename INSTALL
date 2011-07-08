@@ -1,9 +1,31 @@
 Installation Instructions
-=========================
+*************************
 
-Simply extract the contents of the release to a directory on your server and
-browse to this directory using your web browser. The install.php script will
-run. You will have to input some details about the administrator account. Once
-you are done, delete or rename install.php and then once again, go to the
-directory with your web browser. You should see the main page of the forum.The
-html of the board may be customized by changing OutHtml.php.
+Basic Installation
+==================
+
+1. Simply extract the contents of the release to a directory on your web
+server.
+
+2. Ensure that the permissions are set correctly so that the "db" directory and
+all its contents are readable and writable by the user under which php runs.
+
+3. Open your web browser at the location at which the forum is hosted. The
+"install.php" script will run.
+
+4. Enter some details about the administrator account and press "Install".
+
+5. Once done, delete or rename "install.php" and then once again, go to the
+location at which the forum is hosted with your web browser. You should see the
+main page of the forum. The html of the board may be customized by modifying
+outHtml.php and the css by modifying "basic.css".
+
+Example:
+
+$ cd /var/www
+$ # get the source code
+$ tar xvzf floobb-?.?.?.tar.gz # replace ?.?.? by the correct version
+$ mv floobb-?.?.? floobb # replace ?.?.? by the correct version
+$ chmod a+r+w+x -R floobb/db
+$ firefox http://localhost/floobb # and then fill in the details
+$ firefox http://localhost/floobb # browse the newly created forum
