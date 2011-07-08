@@ -6,6 +6,11 @@ external database. It simply uses text files to store the data and is optimized
 for speed. It incorporates TinyMCE to provide a WYSIWYG method of entering
 posts into the system.
 
+Requirements/Prerequisites:
+* A webserver (Apache, Lighttpd, etc.).
+* PHP 5.2+
+* The PHP GD extension.
+
 License:
 
     Copyright (C) 2011 Ross Lagerwall <rosslagerwall@gmail.com>
