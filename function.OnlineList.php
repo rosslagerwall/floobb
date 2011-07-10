@@ -1,4 +1,7 @@
 <?php
+
+	/* Add a logged in user to the list of users online (part of the statistics
+	 * measuring code). The list is stored as a list of usernames. */
 	function addUser($userName)
 	{
 		$fileC = file("db/forumOnlineUsers.dat",FILE_IGNORE_NEW_LINES);
@@ -26,7 +29,9 @@
 		}
 		file_put_contents("db/forumOnlineUsers.dat",$str);
 	}
-	
+
+	/* Add a guest to the list of guests online (part of the statistics
+	 * measuring code). The list is stored as a list of IP addresses. */
 	function addGuest($ip)
 	{
 		$fileC = file("db/forumOnlineGuests.dat",FILE_IGNORE_NEW_LINES);
@@ -55,6 +60,9 @@
 		file_put_contents("db/forumOnlineGuests.dat",$str);
 	}
 
+	/* This function is called before statistics are display on the index page
+	 * to discard any people in the online lists who haven't been active within
+	 * the last five minutes. */
 	function purge()
 	{
 		$fileC = file("db/forumOnlineGuests.dat",FILE_IGNORE_NEW_LINES);
@@ -93,7 +101,9 @@
 			file_put_contents("db/forumOnlineUsers.dat","");
 		}
 	}
-	
+
+	/* Called when a user logs out to forcibly remove them from the online
+	 * users list. */
 	function removeUser($userName)
 	{
 		$fileC = file("db/forumOnlineUsers.dat",FILE_IGNORE_NEW_LINES);
@@ -114,7 +124,9 @@
 			file_put_contents("db/forumOnlineUsers.dat","");
 		}
 	}
-	
+
+	/* Called when a user logs in to forcibly remove them from the online
+	 * guests list. */
 	function removeGuest($ip)
 	{
 		$fileC = file("db/forumOnlineGuests.dat",FILE_IGNORE_NEW_LINES);

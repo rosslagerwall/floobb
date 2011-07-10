@@ -1,4 +1,21 @@
 <?php
+
+/* A class representing a single Forum. Each Forum contains a number of topics.
+In other words, it is the largest category.
+
+Each forum has a forumId, a forum name, a description, a number of posts and a
+number of topics.
+
+The noOfTopics and noOfPosts are cached here for performance reasons instead of
+recounting the number of posts each time it is required.
+
+The object is constructed from a string in the following format:
+forumId~forumName~description~noOfTopics~noOfPosts
+
+Each forum is a line in a file:
+db/forumList.dat
+
+*/
 class Forum
 {
 	private $forumId;

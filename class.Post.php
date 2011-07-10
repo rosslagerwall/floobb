@@ -1,5 +1,17 @@
 <?php
 
+/* A class representing a single post. Each message in a topic is a post.
+
+Each post has a postId, a topicId, a forumId, a userId, a dateTime and a
+message.
+
+The object is constructed from a string in the following format:
+forumId~topicId~postId~userId~dateTime~message
+
+Each post is a line in a file called posts.dat:
+db/Topics/<topicId>/posts.dat
+
+*/
 class Post
 {
 	private $postId;
@@ -45,6 +57,7 @@ class Post
 		return $this->dateTime;
 	}
 	
+	/* Loads a User object of the user who created this Post */
 	public function getUser()
 	{
 		return new User(file_get_contents("db/Users/".$this->userId.".dat"));

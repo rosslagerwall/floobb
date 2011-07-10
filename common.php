@@ -1,4 +1,8 @@
 <?php
+	/* This file provides includes and sets up sessions, certain variables,
+	remember me functionality and logins. 
+	This file is included from many different pages. */
+
 	include_once("class.User.php");
 	include_once("class.Topic.php");
 	include_once("class.Post.php");

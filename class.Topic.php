@@ -1,4 +1,30 @@
 <?php
+
+/* A class representing a single topic. Each message in a topic is a post.
+
+Each topic has a topicId, a forumId, a userId, a dateTime, a total number of
+posts, a boolean variable indicating whether the topic is locked or not and a
+boolean variable indicating whether it is a "sticky" topic or not.
+
+The noOfPosts is cached here for performance reasons instead of recounting the
+number of posts each time it is required.
+
+The object is constructed from a string in the following format:
+forumId
+topicId
+userId
+dateTime
+noOfPosts
+topicName
+isLocked
+isSticky
+
+Each topic has a directory consisting of the topic string:
+db/Topics/<topicId>/topic.dat
+and the posts:
+db/Topics/<topicId>/posts.dat
+
+*/
 class Topic
 {
 	private $topicId;
@@ -33,6 +59,7 @@ class Topic
 		return $this->topicId;
 	}
 	
+	/* Loads a User object of the user who created this Topic */
 	public function getUser()
 	{
 		return new User(file_get_contents("db/Users/".$this->userId.".dat"));
@@ -53,6 +80,9 @@ class Topic
 		return $this->posts;
 	}
 	
+	/* Load a Post object of the most recent post in the Topic.
+	This is used to get the dateTime of the most recent post in this topic
+	for display in various places. */
 	public function getLatestPost()
 	{
 		$fileC = file("db/Topics/".$this->topicId."/posts.dat");

@@ -1,4 +1,33 @@
 <?php
+
+/* A class representing a User.
+
+Each user has a userId, a password, a join date, a level, a signature, an email
+address, a boolean variable indicating whether their email address is visible
+or not, an URL to their avatar (if any), a boolean variable indicating whether
+they are banned or not, a number of topics and a number of posts.
+
+The noOfTopics and noOfPosts are cached here for performance reasons instead of
+recounting the number of posts each time it is required.
+
+The object is constructed from a string in the following format:
+userId
+password
+joinDate
+level
+sig
+email
+mustHideEmail
+avatar
+isBanned
+noOfTopics
+noOfPosts
+
+Each User has a file in the Users directory identified by the users' name,
+consisting of the user string:
+db/Users/<username>.dat
+
+*/
 class User
 {
 	private $userId;

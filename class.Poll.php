@@ -1,5 +1,23 @@
 <?php
 
+/* A class representing a Poll. A Topic may have a Poll associated with it.
+
+Each poll has a forumId, a topicId, a join date, an array of users who have
+voted in the poll and a 2D array of option, no. of votes pairs and an end date.
+
+The object is constructed from a string in the following format:
+forumId
+topicId
+user1,user2,user3,...
+option1,noOfVotes
+option2,noOfVotes
+option3,noOfVotes
+...
+
+Each Poll has a file in the directory identified by the topicId:
+db/Topics/<topicId>/poll.dat
+
+*/
 class Poll
 {
 	private $forumId;
