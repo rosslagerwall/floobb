@@ -36,19 +36,19 @@
 					echo "<div id='adminControls'>Moderator Controls: ";
 					if ($topic->isLocked() == "false")
 					{
-						echo "<a href='lockExecute.php?mode=lock&topicId=".$_GET["topicId"]."'>Lock</a>&nbsp";
+                                                echo "<a href='lockExecute.php?mode=lock&topicId=".htmlentities($_GET["topicId"])."'>Lock</a>&nbsp";
 					}
 					else
 					{
-						echo "<a href='lockExecute.php?mode=unlock&topicId=".$_GET["topicId"]."'>Unlock</a>&nbsp";
+						echo "<a href='lockExecute.php?mode=unlock&topicId=".htmlentities($_GET["topicId"])."'>Unlock</a>&nbsp";
 					}
 					if ($topic->isSticky() == "false")
 					{
-						echo "<a href='stickyExecute.php?mode=sticky&forumId=".$_SESSION['forum']->getForumId()."&topicId=".$_GET["topicId"]."'>Sticky</a>&nbsp";
+						echo "<a href='stickyExecute.php?mode=sticky&forumId=".$_SESSION['forum']->getForumId()."&topicId=".htmlentities($_GET["topicId"])."'>Sticky</a>&nbsp";
 					}
 					else
 					{
-						echo "<a href='stickyExecute.php?mode=unsticky&forumId=".$_SESSION['forum']->getForumId()."&topicId=".$_GET["topicId"]."'>Unsticky</a>&nbsp";
+						echo "<a href='stickyExecute.php?mode=unsticky&forumId=".$_SESSION['forum']->getForumId()."&topicId=".htmlentities($_GET["topicId"])."'>Unsticky</a>&nbsp";
 					}
 					echo "</div>";
 				}
@@ -149,12 +149,12 @@
 				$deleteStr = "";
 				if ($_SESSION['loggedIn'] == true && $_SESSION['user']->getLevel() > 1 && sizeOf($postArr) > 1)
 				{
-					$deleteStr = "<a class='delete' href='moderate.php?flag=post&postId=".$item->getPostId()."&topicId=".$_GET['topicId']."'>delete</a><br />";			
+					$deleteStr = "<a class='delete' href='moderate.php?flag=post&postId=".$item->getPostId()."&topicId=".htmlentities($_GET['topicId'])."'>delete</a><br />";			
 				}
 				
 				if ($_SESSION['loggedIn'] == true && $_SESSION['user']->getLevel() > 1)
 				{
-					$deleteStr .= "<a class='delete' href='editPost.php?postId=".$key."&topicId=".$_GET['topicId']."'>edit</a><br />";
+					$deleteStr .= "<a class='delete' href='editPost.php?postId=".$key."&topicId=".htmlentities($_GET['topicId'])."'>edit</a><br />";
 				}
 				if ($_SESSION['loggedIn'] == true)
 				{
@@ -172,7 +172,7 @@
 			if ($_SESSION['loggedIn'] == true && $topic->isLocked() == "false")
 			{
 				?>
-					<form action="postExecute.php?topicId=<?php echo $_GET['topicId']."&postId=".$count; ?>" method="post" onsubmit="return verify(this);">
+					<form action="postExecute.php?topicId=<?php echo htmlentities($_GET['topicId'])."&postId=".$count; ?>" method="post" onsubmit="return verify(this);">
 						<div id='replyId'>
 							Post Reply:<br />
 							<div id="imageInfo">Images may be no bigger than 600 x 600 and 200kB.</div>

@@ -10,7 +10,7 @@
 outHtml2("Edit Topic:","viewTopics.php?forumId=".$topic->getForumId());
 ?>
 		
-		<form action="editTopicExecute.php?topicId=<?php echo $_GET['topicId']."&forumId=".$topic->getForumId(); ?>" method="post">
+		<form action="editTopicExecute.php?topicId=<?php echo htmlentities($_GET['topicId'])."&forumId=".$topic->getForumId(); ?>" method="post">
 			<div id="topicDiv">
 				Topic Name:<br />
 				<input type="text" name="name" id="name" value="<?php echo $topic->getTopicName() ?>" /><br />

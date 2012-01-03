@@ -1,7 +1,7 @@
 <?php
 	include("common.php");
 	
-	outHtml1("View User - ".$_GET['userId']);
+        outHtml1("View User - ".htmlentities($_GET['userId']));
 ?>
 <style>
 .list {
@@ -35,7 +35,7 @@
 }
 </style>
 <?php
-	outHtml2("View User: ".$_GET['userId'],$_SERVER['HTTP_REFERER']);
+	outHtml2("View User: ".htmlentities($_GET['userId']),$_SERVER['HTTP_REFERER']);
 ?>
 
 		<table class='list'>
@@ -73,7 +73,7 @@
 		<?php
 			if ($_SESSION['loggedIn'] == true)
 			{
-				echo "<div align='center' style='margin-top: 5px;'><a href='pmCompose.php?userId=".$_GET['userId']."'>PM User</a></div>";
+				echo "<div align='center' style='margin-top: 5px;'><a href='pmCompose.php?userId=".htmlentities($_GET['userId'])."'>PM User</a></div>";
 			}
 
 	outHtml3();

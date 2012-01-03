@@ -53,7 +53,7 @@
 			</tr>
 		</table>
 		<div id="controlDiv">
-			<a href="pmDelete.php?&messageId=<?php echo $_GET['messageId'] ?>">Delete</a>
+			<a href="pmDelete.php?&messageId=<?php echo htmlentities($_GET['messageId']) ?>">Delete</a>
 		</div>
 <?php
 	outHtml3();

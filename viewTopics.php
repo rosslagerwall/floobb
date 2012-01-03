@@ -90,7 +90,7 @@
 				$deleteStr = "";
 				if ($_SESSION['loggedIn'] == true && $_SESSION['user']->getLevel() > 1)
 				{
-					$deleteStr = "<a class='deleteTopic' href='moderate.php?flag=topic&forumId=".$_GET['forumId']."&topicId=".$item->getTopicId()."'>delete</a><a class='deleteTopic' href='moveTopic.php?topicId=".$item->getTopicId()."&forumId=".$_GET['forumId']."'>move</a><a class='deleteTopic' href='editTopic.php?topicId=".$item->getTopicId()."'>edit</a>";
+                                        $deleteStr = "<a class='deleteTopic' href='moderate.php?flag=topic&forumId=".htmlentities($_GET['forumId'])."&topicId=".$item->getTopicId()."'>delete</a><a class='deleteTopic' href='moveTopic.php?topicId=".$item->getTopicId()."&forumId=".htmlentities($_GET['forumId'])."'>move</a><a class='deleteTopic' href='editTopic.php?topicId=".$item->getTopicId()."'>edit</a>";
 				}
 				echo "<tr><td class='listtopicname'><a href='viewPosts.php?topicId=".$item->getTopicId()."'>".$item->getTopicName()."</a>".$deleteStr."</td>
 					<td class='listtopiccreator'><a href='viewUser.php?userId=".$item->getUser()->getUserId()."'>".$item->getUser()->getUserId()."</a>
@@ -115,13 +115,13 @@
 						{
 							if ($pageNo == 0)
 							{
-								echo "1&nbsp;<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=1'>2</a>";
-								$controlsStr = "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=1'>Next</a>";
+								echo "1&nbsp;<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=1'>2</a>";
+								$controlsStr = "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=1'>Next</a>";
 							}
 							else
 							{
-								echo "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=0'>1</a>&nbsp;2";
-								$controlsStr = "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=0'>Prev</a>";
+								echo "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=0'>1</a>&nbsp;2";
+								$controlsStr = "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=0'>Prev</a>";
 							}
 							
 							
@@ -131,18 +131,18 @@
 							$maxPage = ceil($forum->getTotalTopics()/$topicsperpage)-1;
 							if ($pageNo == 0)
 							{
-								echo "1&nbsp;...&nbsp;<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=".$maxPage."'>".($maxPage+1)."</a>";
-								$controlsStr = "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=".($pageNo+1)."'>Next</a>";
+								echo "1&nbsp;...&nbsp;<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=".$maxPage."'>".($maxPage+1)."</a>";
+								$controlsStr = "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=".($pageNo+1)."'>Next</a>";
 							}
 							else if ($pageNo == $maxPage)
 							{
-								echo "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=0'>1</a>&nbsp;...&nbsp;".($maxPage+1);
-								$controlsStr = "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=".($pageNo-1)."'>Prev</a>";
+								echo "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=0'>1</a>&nbsp;...&nbsp;".($maxPage+1);
+								$controlsStr = "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=".($pageNo-1)."'>Prev</a>";
 							}
 							else
 							{
-								echo "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=0'>1</a>&nbsp;...&nbsp;".($pageNo+1)."&nbsp;...&nbsp;<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=".$maxPage."'>".($maxPage+1)."</a>";
-								$controlsStr = "<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=".($pageNo-1)."'>Prev</a>&nbsp;<a href='viewTopics.php?forumId=".$_GET['forumId']."&page=".($pageNo+1)."'>Next</a>";
+								echo "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=0'>1</a>&nbsp;...&nbsp;".($pageNo+1)."&nbsp;...&nbsp;<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=".$maxPage."'>".($maxPage+1)."</a>";
+								$controlsStr = "<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=".($pageNo-1)."'>Prev</a>&nbsp;<a href='viewTopics.php?forumId=".htmlentities($_GET['forumId'])."&page=".($pageNo+1)."'>Next</a>";
 							}
 						}
 						
@@ -153,8 +153,8 @@
 					<?php
 					if ($_SESSION['loggedIn'] == true)
 					{
-						?><a href="addTopic.php?forumId=<?php echo $_GET['forumId']?>">Add Topic</a><br />
-						<a href="addPoll.php?forumId=<?php echo $_GET['forumId']?>">Add Poll</a><?php
+						?><a href="addTopic.php?forumId=<?php echo htmlentities($_GET['forumId']) ?>">Add Topic</a><br />
+						<a href="addPoll.php?forumId=<?php echo htmlentities($_GET['forumId']) ?>">Add Poll</a><?php
 					}
 					?>
 				</div>

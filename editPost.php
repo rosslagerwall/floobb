@@ -22,7 +22,7 @@
 	outHtml2("Edit Post:","viewPosts.php?topicId=".$actual->getTopicId());
 ?>
 		
-		<form action="editPostExecute.php?topicId=<?php echo $_GET['topicId'] ?>&postId=<?php echo $_GET['postId'] ?>" method="post">
+		<form action="editPostExecute.php?topicId=<?php echo htmlentities($_GET['topicId']) ?>&postId=<?php echo htmlentities($_GET['postId']) ?>" method="post">
 			<div id="messageDiv">
 				Post Message:<br />
 				<textarea name="message"><?php echo trim($actual->getMessage()); ?></textarea><br />
